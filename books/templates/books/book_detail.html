@@ -1,0 +1,6 @@
+<h1>{{ book.title }}</h1>
+<p>Author: {{ book.author }}</p>
+<p>Published: {{ book.published_on|default:"Not specified" }}</p>
+
+<a href="{% url 'books:book_update' book.pk %}">Edit</a>
+<a href="{% url 'books:book_list' %}">Back to books</a>
